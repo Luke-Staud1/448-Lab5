@@ -1,0 +1,25 @@
+p {
+    background-color: rgb(127, 170, 219);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(72, 92, 136);
+}
+
+a {
+    background-color: rgb(93, 93, 160);
+    color: red;
+}
+
+a:hover {
+    background-color: red;
+    color: rgb(87, 87, 172)
+}
+
+p.TopText {
+    color: rgb(214, 66, 20);
+    background-color: rgb(16, 5, 58);
+    font-size: 30px;
+}

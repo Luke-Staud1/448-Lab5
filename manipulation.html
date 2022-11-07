@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<p id="dummyText" ;
+    style="border-width:3px; border-style:solid; border-color:#FF0000;background-color: rgb(72, 92, 136)">
+    the fitness gram pacer test is a multi stage aerobic capacity test that progressively gets harder as it continues,
+    line up at the start.
+</p>
+<label for="BorderR">Border R:</label>
+<input type="text" id="borderR" name="BorderR">
+<p></p>
+<label for="BorderG">Border G:</label>
+<input type="text" id="borderG" name="BorderG">
+<p></p>
+<label for="BorderB">Border B:</label>
+<input type="text" id="borderB" name="BorderB">
+<p></p>
+<label for="BorderW">Border width:</label>
+<input type="text" id="borderW" name="BorderW">
+<p></p>
+<label for="BgColorR">Background Color R:</label>
+<input type="text" id="bgColorR" name="BgColorR">
+<p></p>
+<label for="BgColorG">Background Color G:</label>
+<input type="text" id="bgColorG" name="BgColorG">
+<p></p>
+<label for="BgColorB">Background Color B:</label>
+<input type="text" id="bgColorB" name="BgColorB">
+
+<script>
+    var bordRi = document.getElementById("borderR");
+    var backRi = document.getElementById("bgColorR");
+    var bordGi = document.getElementById("borderG");
+    var backGi = document.getElementById("bgColorG");
+    var bordBi = document.getElementById("borderB");
+    var backBi = document.getElementById("bgColorB");
+    var bordWi = document.getElementById("borderW");
+
+    var bordR = 230;
+    var backR = 72;
+    var bordG = 1;
+    var backG = 92;
+    var bordB = 1;
+    var backB = 136;
+    bordRi.addEventListener('keyup', function onInput() {
+        temp = parseInt(bordRi.value);
+        if (temp != NaN) {
+            bordR = temp;
+            updateColor();
+        }
+    });
+
+    bordGi.addEventListener('keyup', function onInput() {
+        temp = parseInt(bordGi.value);
+        if (temp != NaN) {
+            bordG = temp;
+            updateColor();
+        }
+    });
+
+    bordBi.addEventListener('keyup', function onInput() {
+        temp = parseInt(bordBi.value);
+        if (temp != NaN) {
+            bordB = temp;
+            updateColor();
+        }
+    });
+    bordWi.addEventListener('keyup', function onInput() {
+        temp = parseInt(bordWi.value);
+        console.log("here")
+        if (temp != NaN) {
+            var element = document.getElementById("dummyText");
+            element.style.borderWidth = `${temp}px`;
+        }
+    });
+
+    backRi.addEventListener('keyup', function onInput() {
+        temp = parseInt(backRi.value);
+        if (temp != NaN) {
+            backR = temp;
+            updateColor();
+        }
+    });
+
+    backGi.addEventListener('keyup', function onInput() {
+        temp = parseInt(backGi.value);
+        if (temp != NaN) {
+            backG = temp;
+            updateColor();
+        }
+    });
+
+    backBi.addEventListener('keyup', function onInput() {
+        temp = parseInt(backGi.value);
+        if (temp != NaN) {
+            backB = temp;
+            updateColor();
+        }
+    });
+    function updateColor() {
+        var element = document.getElementById("dummyText");
+        element.style.backgroundColor = `rgb(${backR}, ${backG}, ${backB})`;
+        element.style.borderColor = `rgb(${bordR}, ${bordG}, ${bordB})`;
+    }
+</script>

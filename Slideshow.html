@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<images>
+    <div imageName="image1">
+        <img src="https://kuathletics.com/wp-content/uploads/2019/03/amt-7QxVjTBICDcUOVWP-facilities_hero_image.jpg"
+            width="600" height="400" />
+    </div>
+    <div imageName="image1">
+        <img src="https://engr.ku.edu/sites/engr/files/images/2021/heroes/Engr%20Complex%20Aerial.jpg" width="600"
+            height="400" />
+    </div>
+    <div imageName="image1">
+        <img src="https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fthroughthephog.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F487955938-850x560.jpeg"
+            width="600" height="400" />
+    </div>
+    <div imageName="image1">
+        <img src="https://assets-jpcust.jwpsrv.com/thumbnails/ltzsmkeo-1280.jpg" width="600" height="400" />
+    </div>
+    <div imageName="image1">
+        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/the-campanile-tower-on-mt-oread-over-kaw-valley-panorama-university-of-kansas-gregory-ballos.jpg"
+            width="600" height="400" />
+    </div>
+</images>
+<script>
+    var pics = document.querySelector("images").querySelectorAll("div");
+    pics.forEach(element => element.style.display = 'none')
+    let prev = document.createElement("button");
+    prev.innerHTML = "Previos"
+    document.body.appendChild(prev)
+    let next = document.createElement("button");
+    next.innerHTML = "Next"
+    document.body.appendChild(next)
+    var index = 0;
+    pics[index].style.display = 'block'
+    next.addEventListener('click', function onClick() {
+        pics.forEach(element => element.style.display = 'none')
+        if (index < 4) {
+            index++;
+        }
+        else {
+            index = 0;
+        }
+        pics[index].style.display = 'block'
+    })
+    prev.addEventListener('click', function onClick() {
+        pics.forEach(element => element.style.display = 'none')
+        if (index > 0) {
+            index--;
+        }
+        else {
+            index = 4;
+        }
+        pics[index].style.display = 'block'
+    })
+</script>
